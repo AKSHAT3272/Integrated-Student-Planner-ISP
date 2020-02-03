@@ -3,9 +3,11 @@
 
 > ISP is a web-based application that keeps track of homework assignments, exams, and projects and notifies you via email and chrome notifications before they are due. The key feature of ISP is the ability to automate calendars and information from external sources easily into our application.
 
-### 🏠 [Homepage](https://127.0.0.1 (Change this))
+### 🏠 [Homepage](https://127.0.0.1) 
+ (Change this later)
 
-### ✨ [Demo](https://127.0.0.1 (Change this later))
+### ✨ [Demo](https://127.0.0.1)
+ (Change this later)
 
 ## Usage
 
@@ -17,11 +19,3 @@ Add instructions on usage
 
 👤 **Akshat Patel and David Ijagbemi**
 
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

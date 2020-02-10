@@ -13,3 +13,13 @@ def index():
 @login_required
 def profile():
     return render_template('profile.html', name=current_user.name)
+
+@main.route('/calendar')
+@login_required
+def calendar():
+    return render_template('calendar.html', name=current_user.name)
+
+@main.route('/home')
+@login_required
+def home():
+    return render_template('home.html', name=current_user.name)

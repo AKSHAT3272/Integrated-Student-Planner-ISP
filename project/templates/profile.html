@@ -6,4 +6,39 @@
 <h1 class="title">
   Welcome, {{ name }}!
 </h1>
+
+
+      <div class="card is-centered" style="margin-left: 25%;  width: 50%; height: 50%;">
+        <div class="card-image" >
+          <figure class="image is-4by3">
+            <img src="static/cal.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <a class="pagination is-large">
+               <h1 class="pagination-link is-current is-info" style="background-color: hsl(204, 86%, 53%); border-color: hsl(204, 86%, 53%);">
+
+               {{name[0]}}
+             </h1>
+             </a>
+            <!--  <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>-->
+            </div>
+            <div class="media-content">
+              <p class="title is-4">{{ name }}</p>
+              <p class="subtitle is-6">@{{ name }}</p>
+            </div>
+          </div>
+        </div>
+          <div class="content">
+           <p> <strong>Major:</strong> Computer Science <strong>Semester:</strong> Spring 2020 <strong>Classes:</strong> Senior Seminar II
+           </p>
+	   <br>
+          </div>
+        </div>
+
+
 {% endblock %}

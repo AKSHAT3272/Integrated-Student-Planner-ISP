@@ -9,6 +9,10 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
+@main.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
 @main.route('/profile')
 @login_required
 def profile():
@@ -18,6 +22,11 @@ def profile():
 @login_required
 def calendar():
     return render_template('calendar.html', name=current_user.name)
+
+@main.route('/tracker')
+@login_required
+def tracker():
+    return render_template('tracker.html', name=current_user.name)
 
 @main.route('/home')
 @login_required

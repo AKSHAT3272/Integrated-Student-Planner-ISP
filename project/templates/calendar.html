@@ -3,10 +3,75 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Integerated Student Planner
-</h1>
-<h2 class="subtitle">
-  Just a 📅 page while we make an actual calendar page!
-</h2>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css" />
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+
+<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.2.2/ical.min.js"></script>
+
+<script type="text/javascript">
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid', 'timeGrid', 'list', 'bootstrap' ],
+      timeZone: 'UTC',
+      themeSystem: 'bootstrap',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      },
+      weekNumbers: true,
+      eventLimit: true, // allow "more" link when too many events
+      //events: 'https://fullcalendar.io/demo-events.json'
+      //events: '../static/icalexport.json'
+      events: [
+    {
+      title  : 'Senior seminar II',
+      start  : '2020-02-17'
+    },
+    {
+      title  : 'Work on ISP',
+      start  : '2020-02-18',
+      end    : '2020-02-20'
+    },
+    {
+      title  : 'Research conference abstracts due',
+      start  : '2020-02-21T12:30:00',
+      allDay : false // will make the time show
+    }
+  ]
+
+      /*{url: 'https://moodle.adelphi.edu/calendar/export_execute.php?userid=46823&authtoken=6cba10fe984542e7db46c6aafd7cdb3a8c404f81&preset_what=all&preset_time=custom',
+        failure: function() {
+          document.getElementById('script-warning').style.display = 'block'
+        }
+      },
+      loading: function(bool) {
+        document.getElementById('loading').style.display =
+          bool ? 'block' : 'none';
+      }*/
+    });
+
+
+    calendar.render();
+  });
+</script>
+
+<div id="calendar"></div>
 {% endblock %}

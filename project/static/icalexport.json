@@ -1,0 +1,199 @@
+[
+    {
+      "METHOD": "PUBLISH",
+      "PRODID": "-//Moodle Pty Ltd//NONSGML Moodle Version 2018051705.15//EN",
+      "VERSION": "2.0",
+      "VEVENT": [
+        {
+          "UID": "328621@moodle.adelphi.edu",
+          "title": "Assignment 4: (Discussion) Termination is due",
+          "DESCRIPTION": "You work as a forensics investigator for a large organization. ",
+          "\tigation.\\n\\nDue dates": "\\n\\n\t* Initial post should be posted no later than Su",
+          "\tnday (February 9\\, 11": "59pm)\\n\t* Replies must be posted no later than the fo",
+          "\tllowing Tuesday (February 11\\, 11": "59pm)\\n\\n",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200210T003542Z",
+          "DTSTAMP": "2020-02-17",
+          "start": "2020-02-12",
+          "end": "2020-02-12",
+          "CATEGORIES": "CSC 620-001 - Spring 2020"
+        },
+        {
+          "UID": "331482@moodle.adelphi.edu",
+          "title": "Assn 2 – p. 101/2.1\\, 2.2\\, 2.8 is due",
+          "DESCRIPTION": "2.1 What is the purpose of system calls?\\n\\n2.2 What is the pur",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200217T000446Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200212T170000Z",
+          "end": "20200212T170000Z",
+          "CATEGORIES": "CSC 453-001 - Spring 2020"
+        },
+        {
+          "UID": "344402@moodle.adelphi.edu",
+          "title": "title 3: Evidence Processing is due",
+          "DESCRIPTION": "Submit a title of the week's readings BEFORE our weekly meeti",
+          "\tng.\\n\\nCritical thinking": " In addition to your title\\, include topics that",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235319Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200212T170000Z",
+          "end": "20200212T170000Z",
+          "CATEGORIES": "CSC 620-001 - Spring 2020"
+        },
+        {
+          "UID": "329459@moodle.adelphi.edu",
+          "title": "Sprint Report 1 is due",
+          "DESCRIPTION": "Upload the report of your first sprint no later than two days a",
+          "\tighlights must include": "\\n\\n\t* Sprint start and end date\\, its goal\\, and a ",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235848Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200213T045900Z",
+          "end": "20200213T045900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329467@moodle.adelphi.edu",
+          "title": "Research Conference Abstracts is due",
+          "DESCRIPTION": "Post the abstract for the research conference here and provide ",
+          "\t\\n\\n\\nLinks": "\\n------\\n[1] https://aurc.adelphi.edu/submit-abstract/\\n",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200106T144341Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200217T045900Z",
+          "end": "20200217T045900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "344397@moodle.adelphi.edu",
+          "title": "Assignment 5: Mindtap Exercises is due",
+          "DESCRIPTION": "COMPLETE THE FOLLOWING CENGAGE MINDTAP ACTIVITIES:\\n\\n\t* Module",
+          "\t 4\\,  Lab 4-1": " Processing Crime and Incident Scenes\\n\\n",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200217T002917Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200217T045900Z",
+          "end": "20200217T045900Z",
+          "CATEGORIES": "CSC 620-001 - Spring 2020"
+        },
+        {
+          "UID": "331565@moodle.adelphi.edu",
+          "title": "Assn 3 – p. 154-5/3.1\\; running another set of concurrent processes",
+          "DESCRIPTION": "3.1  Using the program shown in Figure 3.30\\, explain what the ",
+          "\t          wait(NULL)\\;\\n                printf(\"PARENT": " value = %d\\\\n\"\\, va",
+          "\trogram to run": "\\n\\nCopy and paste this program into a C file on compsci. Com",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200217T000451Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200219T170000Z",
+          "end": "20200219T170000Z",
+          "CATEGORIES": "CSC 453-001 - Spring 2020"
+        },
+        {
+          "UID": "329460@moodle.adelphi.edu",
+          "title": "Sprint Report 2 is due",
+          "DESCRIPTION": "Upload the report of your second sprint. The report must includ",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235849Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200226T045900Z",
+          "end": "20200226T045900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329461@moodle.adelphi.edu",
+          "title": "Sprint Report 3 is due",
+          "DESCRIPTION": "Upload the report of your third sprint. The report must include",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235849Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200309T035900Z",
+          "end": "20200309T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329465@moodle.adelphi.edu",
+          "title": "Mid-term Deliverables is due",
+          "DESCRIPTION": "One member of each group must upload their mid-term deliverable",
+          "\ts [1]. \\n\\nMandatory elements include": "\\n\\n\t* Report on achieved goals and p",
+          "\tn\\n\\nLinks": "\\n------\\n[1] https://moodle.adelphi.edu/mod/forum/view.php?id=2",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200106T144107Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200316T035900Z",
+          "end": "20200316T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329462@moodle.adelphi.edu",
+          "title": "Sprint Report 4 is due",
+          "DESCRIPTION": "Upload the report of your fourth sprint. The report must includ",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235850Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200406T035900Z",
+          "end": "20200406T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329463@moodle.adelphi.edu",
+          "title": "Sprint Report 5 is due",
+          "DESCRIPTION": "Upload the report of your fifth sprint. The report must include",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235850Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200420T035900Z",
+          "end": "20200420T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329466@moodle.adelphi.edu",
+          "title": "Research Conference Materials is due",
+          "DESCRIPTION": "Upload all materials you presented for the research conference ",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235852Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200427T035900Z",
+          "end": "20200427T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329464@moodle.adelphi.edu",
+          "title": "Sprint Report 6 is due",
+          "DESCRIPTION": "Upload the report of your sixth sprint. The report must include",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235851Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200504T035900Z",
+          "end": "20200504T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329468@moodle.adelphi.edu",
+          "title": "Final Project Deliverables is due",
+          "DESCRIPTION": "One member of each group must upload their final project delive",
+          "\trables [1]. \\n\\nMandatory elements include": "\\n\\n\t* Report on achieved goals\\",
+          "\tthe proposals of at least one other group.\\n\\n\\n\\nLinks": "\\n------\\n[1] https",
+          "\t": "//moodle.adelphi.edu/mod/forum/view.php?id=2200199\\n",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200106T144410Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200511T035900Z",
+          "end": "20200511T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        },
+        {
+          "UID": "329469@moodle.adelphi.edu",
+          "title": "Individual Reflections is due",
+          "DESCRIPTION": "Your final individual deliverables must include a personal refl",
+          "CLASS": "PUBLIC",
+          "LAST-MODIFIED": "20200216T235851Z",
+          "DTSTAMP": "20200217T024855Z",
+          "start": "20200518T035900Z",
+          "end": "20200518T035900Z",
+          "CATEGORIES": "CSC 482-002 - Spring 2020"
+        }
+      ]
+    }
+  ]

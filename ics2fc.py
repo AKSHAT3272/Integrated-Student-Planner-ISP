@@ -14,17 +14,6 @@ __import__('pytz')
 __import__('icalendar')
 from icalendar import Calendar
 
-
-__author__ = "Andy Yin"
-__copyright__ = "Copyright (C) 2015, Andy Yin"
-__credits__ = ["Eddie Blundell"]
-__license__ = "MIT"
-__version__ = "1.0.0"
-__maintainer__ = "Andy Yin"
-__email__ = "me@fortheyin.com"
-__status__ = "Production"
-
-
 # quit if the arguments are incorrect, and prints a usage
 if (len(sys.argv) != 2 and len(sys.argv) != 3):
 	print(sys.argv[0] + ': illegal operation')

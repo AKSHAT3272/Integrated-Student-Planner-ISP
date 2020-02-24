@@ -1,0 +1,130 @@
+[
+    {
+        "title": "Assignment 4: (Discussion) Termination is due",
+        "backgroundColor": null,
+        "description": "You work as a forensics investigator for a large organization. The head of Human Resources has just notified you that they are terminating the employment of an employee who was a suspect in an internal harassment investigation. What steps will you take to acquire and preserve evidence?\n\nBe specific about the steps you take, the order in which you take them, and the tools and techniques you expect to utilize.\n\nAfter your post your description, you will be able to see what others posted as well. Respond to at least one other post by suggesting how they can improve their investigation.\n\nDue dates:\n\n\t* Initial post should be posted no later than Sunday (February 9, 11:59pm)\n\t* Replies must be posted no later than the following Tuesday (February 11, 11:59pm)\n\n",
+        "start": "2020-02-12T04:59:00+00:00",
+        "end": "2020-02-12T04:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Assn 2 \u2013 p. 101/2.1, 2.2, 2.8 is due",
+        "backgroundColor": null,
+        "description": "2.1 What is the purpose of system calls?\n\n2.2 What is the purpose of the command interpreter? Why is it usually separate from the kernel?\n\n2.8 How could a system be designed to allow a choice of operating systems from which to boot? What would the bootstrap program need to do?\n\n",
+        "start": "2020-02-12T17:00:00+00:00",
+        "end": "2020-02-12T17:00:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Summary 3: Evidence Processing is due",
+        "backgroundColor": null,
+        "description": "Submit a summary of the week's readings BEFORE\u00a0our weekly meeting.\n\nCritical thinking: In addition to your summary, include topics that were not fully clear to you and list any questions that you would like to discuss in class. Relate what you read in this week's readings to issues discussed previously or to your own existing knowledge.\n",
+        "start": "2020-02-12T17:00:00+00:00",
+        "end": "2020-02-12T17:00:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 1 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your first sprint no later than two days after its completion.\u00a0\n\nReview the sample report for guidance.\n\nReport highlights must include:\n\n\t* Sprint start and end date, its goal, and a reflection on its level of completion\n\t* Sprint Accomplishments in paragraph form. Make sure to explicitly include a description of the testing you performed if you developed software.\n\t* Overview of tasks and issues included during this sprint and their level of completion\n\t* Any changes made to the scope of the current sprint, and a detailed description of why you decided to include them in this sprint, rather than add them to the backlog. Include a NUMBERED list of changes.\n\t* All key decisions made during this sprint, including a brief rationale. Include a NUMBERED and DATED list of decisions\n\t* An overview of all problems that you encountered, and to the extent possible, an explanation of their resolution. Include a NUMBERED list of problems and their resolution\n\t* A work effort report outlining how much time each individual team member logged\n\t* If you developed (partial) deliverables such as design documents, product reviews, etc., include them as appendices\n\nOnly one team member is required to upload the report. The report must be a .pdf-file\n",
+        "start": "2020-02-13T04:59:00+00:00",
+        "end": "2020-02-13T04:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Research Conference Abstracts is due",
+        "backgroundColor": null,
+        "description": "Post the abstract for the research conference here and provide meaningful feedback to at least one proposal that is not your own. After finalizing your abstract, DO NOT FORGET TO SUBMIT IT TO THE RESEARCH CONFERENCE [1] AS WELL!\n\nOnly one member of each group has to post an abstract, but everyone must provide substantial feedback to at least one other post.\n\n\nLinks:\n------\n[1] https://aurc.adelphi.edu/submit-abstract/\n",
+        "start": "2020-02-17T04:59:00+00:00",
+        "end": "2020-02-17T04:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Assignment 5: Mindtap Exercises is due",
+        "backgroundColor": null,
+        "description": "COMPLETE THE FOLLOWING CENGAGE MINDTAP ACTIVITIES:\n\n\t* Module 4,\u00a0\u00a0Lab 4-1: Processing Crime and Incident Scenes\n\n",
+        "start": "2020-02-17T04:59:00+00:00",
+        "end": "2020-02-17T04:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Assn 3 \u2013 p. 154-5/3.1; running another set of concurrent processes is due",
+        "backgroundColor": null,
+        "description": "3.1\u00a0 Using the program shown in Figure 3.30, explain what the output will be at LINE A.\n\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<stdio.h>\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<sys/types.h>\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<unistd.h>\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<sys/wait.h>\n\nint\u00a0value\u00a0=\u00a05;\n\nint\u00a0\u00a0\u00a0\u00a0\u00a0main(void)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pid_t\u00a0\u00a0\u00a0pid;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pid\u00a0=\u00a0fork();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if\u00a0(pid\u00a0==\u00a00)\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0value\u00a0+=\u00a015;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\u00a0if\u00a0(pid\u00a0>\u00a00)\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0wait(NULL);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"PARENT:\u00a0value\u00a0=\u00a0%d\n\",\u00a0value);\u00a0\u00a0/*\u00a0Line\u00a0A\u00a0*/\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n}\n\nSecond Program to run:\n\nCopy and paste this program into a C file on compsci. Compile it and run it 3 or 4 times. What will the following program print? Explain the output that was produced or make your best guess as to why you got this output.\n\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<stdio.h>\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<sys/types.h>\n#include\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<unistd.h>\n\nint\u00a0\u00a0\u00a0\u00a0\u00a0main(void)\n{\n\u00a0\u00a0\u00a0pid_t\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0child_pid;\n\n\u00a0\u00a0\u00a0printf(\"The\u00a0main\u00a0program\u00a0process\u00a0ID\u00a0is\u00a0%d\n\",\u00a0(int)getpid());\n\u00a0\u00a0\u00a0child_pid\u00a0=\u00a0fork();\n\n\u00a0\u00a0\u00a0if\u00a0(child_pid\u00a0!=\u00a00)\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"This\u00a0is\u00a0the\u00a0parent\u00a0process,\u00a0with\u00a0id\u00a0%d\n\",\u00a0(int)\u00a0getpid());\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The\u00a0child\\'s\u00a0process\u00a0ID\u00a0is\u00a0%d\n\",\u00a0(int)\u00a0child_pid);\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"This\u00a0is\u00a0the\u00a0child\u00a0process,\u00a0with\u00a0id\u00a0%d\n\",\u00a0(int)getpid());\n\u00a0\u00a0\u00a0return(0);\n}\n\n",
+        "start": "2020-02-19T17:00:00+00:00",
+        "end": "2020-02-19T17:00:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 2 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your second sprint. The report must include\n\n\t* progress towards sprint goals of the previous sprint\n\t* outcome of testing the development in the previous sprint\n\t* sprint goals for the current sprint\n\t* test plan for the current sprint\n\n",
+        "start": "2020-02-26T04:59:00+00:00",
+        "end": "2020-02-26T04:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 3 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your third sprint. The report must include\n\n\t* progress towards sprint goals of the previous sprint\n\t* outcome of testing the development in the previous sprint\n\t* sprint goals for the current sprint\n\t* test plan for the current sprint\n\n",
+        "start": "2020-03-09T03:59:00+00:00",
+        "end": "2020-03-09T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Mid-term Deliverables is due",
+        "backgroundColor": null,
+        "description": "One member of each group must upload their mid-term deliverables [1].\u00a0\n\nMandatory elements include:\n\n\t* Report on achieved goals and plans towards final deliverable\n\t* Screen shots, wire frames, design summaries, etc. when appopriate\n\nAll students are individually required to provide meaningful feedback to the proposals of at least one other group.\n\n\n\nLinks:\n------\n[1] https://moodle.adelphi.edu/mod/forum/view.php?id=2200198\n",
+        "start": "2020-03-16T03:59:00+00:00",
+        "end": "2020-03-16T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 4 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your fourth sprint. The report must include\n\n\t* progress towards sprint goals of the previous sprint\n\t* outcome of testing the development in the previous sprint\n\t* sprint goals for the current sprint\n\t* test plan for the current sprint\n\n",
+        "start": "2020-04-06T03:59:00+00:00",
+        "end": "2020-04-06T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 5 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your fifth sprint. The report must include\n\n\t* progress towards sprint goals of the previous sprint\n\t* outcome of testing the development in the previous sprint\n\t* sprint goals for the current sprint\n\t* test plan for the current sprint\n\n",
+        "start": "2020-04-20T03:59:00+00:00",
+        "end": "2020-04-20T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Research Conference Materials is due",
+        "backgroundColor": null,
+        "description": "Upload all materials you presented for the research conference here. Only one group member has to upload.\n",
+        "start": "2020-04-27T03:59:00+00:00",
+        "end": "2020-04-27T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Sprint Report 6 is due",
+        "backgroundColor": null,
+        "description": "Upload the report of your sixth sprint. The report must include\n\n\t* progress towards sprint goals of the previous sprint\n\t* outcome of testing the development in the previous sprint\n\t* sprint goals for the current sprint\n\t* test plan for the current sprint\n\n",
+        "start": "2020-05-04T03:59:00+00:00",
+        "end": "2020-05-04T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Final Project Deliverables is due",
+        "backgroundColor": null,
+        "description": "One member of each group must upload their final project deliverables [1].\u00a0\n\nMandatory elements include:\n\n\t* Report on achieved goals\n\t* Screen shots, wire frames, design summaries, etc. when appropriate\n\nAll students are individually required to provide meaningful feedback to the proposals of at least one other group.\n\n\n\nLinks:\n------\n[1] https://moodle.adelphi.edu/mod/forum/view.php?id=2200199\n",
+        "start": "2020-05-11T03:59:00+00:00",
+        "end": "2020-05-11T03:59:00+00:00",
+        "url": null
+    },
+    {
+        "title": "Individual Reflections is due",
+        "backgroundColor": null,
+        "description": "Your final individual deliverables must include a personal reflection on lessons learned, group dynamics, and problems encountered. The reflection must be approximately two pages long.\n\nReflections will be kept confidential.\n",
+        "start": "2020-05-18T03:59:00+00:00",
+        "end": "2020-05-18T03:59:00+00:00",
+        "url": null
+    }
+]

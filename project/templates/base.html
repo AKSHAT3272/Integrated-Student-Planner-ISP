@@ -39,9 +39,15 @@
     <section class="hero is-fullheight">
 
         <div class="hero-head">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              <div class="has-text-centered notification is-danger">
+                  {{ messages[0] }}
+              </div>
+          {% endif %}
+          {% endwith %}
             <nav class="navbar" style="padding-top: 1em;" role="navigation" aira-label="main navigation">
                <div class="container">
-
 
 			              <div class="navbar-brand">
                       {% if not current_user.is_authenticated %}
@@ -128,6 +134,20 @@
                                        </span>
                                 </a>
                               </p>
+                              {% if type == "admin" %}
+                                <p class="control">
+                                  <a href="{{ url_for('main.admin') }}" class="button navbar-item">
+                                    <span class="icon">
+                                        <i class="fas fa-user-shield"></i>
+                                    </span>
+                                    <span>
+                                  Admin
+                                </span>
+                                </a>
+                              </p>
+                              {% else %}
+                              <div></div>
+                              {% endif %}
                                 <p class="control">
                                 <a href="{{ url_for('auth.logout') }}" class="button navbar-item is-danger">
                                   <span class="icon">
@@ -162,7 +182,7 @@
             <div class="level-item"><a class="title has-text-centered is-4" href="#">Integerated Student Planner</a></div>
           <hr>
             <div class="subtitle has-text-centered is-6">
-              <p>&copy; 2020 ISP. All right reserved.</p>
+              <p>&copy;2020 ISP. All right reserved.</p>
             </div>
       </footer>
     </div>

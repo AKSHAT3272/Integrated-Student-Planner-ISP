@@ -32,7 +32,9 @@
           'Description: ' + info.event.extendedProps.description + '.\n \n'
           //'Will open ' + eventObj.url + ' in a new tab'
         );
-
+	       if (info.event.url) {
+          // window.open(info.event.url);
+    			     }
         info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
       } else {
         alert('Clicked ' + eventObj.title);

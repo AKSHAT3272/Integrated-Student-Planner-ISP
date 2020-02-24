@@ -29,8 +29,8 @@
       if (eventObj.url) {
         $.alertable.alert(
           'Event: ' + eventObj.title + '.\n ' +
-          'Description: ' + info.event.extendedProps.description + '.\n' +
-          'Will open ' + eventObj.url + ' in a new tab'
+          'Description: ' + info.event.extendedProps.description + '.\n \n'
+          //'Will open ' + eventObj.url + ' in a new tab'
         );
 
         info.jsEvent.preventDefault(); // prevents browser from following link in current tab.

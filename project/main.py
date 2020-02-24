@@ -21,7 +21,7 @@ def profile():
 @main.route('/calendar')
 @login_required
 def calendar():
-    return render_template('calendar.html', name=current_user.name)
+    return render_template('calendar.html', name=current_user.name, email=current_user.email)
 
 @main.route('/tracker')
 @login_required

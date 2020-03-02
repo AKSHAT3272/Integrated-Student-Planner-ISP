@@ -30,8 +30,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.2.2/ical.min.js"></script>
 
     <!--Alerts-->
-    <script src="static/jquery.alertable.js"></script>
-    <link href="static/jquery.alertable.css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='jquery.alertable.js') }}"></script>
+    <link href="{{ url_for('static', filename='jquery.alertable.css') }}" rel="stylesheet">
 
 </head>
 
@@ -56,7 +56,7 @@
                       {% if current_user.is_authenticated %}
                          <a href="{{url_for('main.home')}}" class="navbar-item">
                       {% endif %}
-				                       <img src="static/calendar.png" alt="Logo">
+				                       <img src="{{ url_for('static', filename='calendar.png') }}" alt="Logo">
 				                           &nbsp;<strong>ISP.</strong>
 			                   </a></a>
                          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarSideMenu">

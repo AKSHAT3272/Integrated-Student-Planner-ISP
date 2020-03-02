@@ -1,0 +1,51 @@
+<!-- templates/reset_with_token.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Change Password</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="{{ url_for('auth.reset_with_token', token=token) }}">
+          {{ form.csrf_token }}
+            <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input is-large" type="password" id="password" name="password" placeholder="New Password" onchange='check_pass();'>
+		     <span class="icon is-small is-left">
+			<i class="fas fa-lock"></i>
+		    </span>
+                </div>
+            </div>
+
+	     <div class="field">
+                <div class="control has-icons-left">
+                    <input class="input is-large" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" onkeyup='check_pass();'>
+                     <span class="icon is-small is-left">
+                        <i class="fas fa-unlock"></i>
+                    </span>
+                </div>
+             </div>
+
+            <button id="submit" class="button is-block is-info is-large is-fullwidth" disabled>Change Password</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function check_pass() {
+    if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+        document.getElementById('submit').disabled = false;
+    } else {
+        document.getElementById('submit').disabled = true;
+    }
+}
+</script>
+{% endblock %}

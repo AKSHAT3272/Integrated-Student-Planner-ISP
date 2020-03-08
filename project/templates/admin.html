@@ -3,11 +3,67 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Integerated Student Planner
-</h1>
-<h2 class="subtitle">
-  This is ~admin page!
-</h2>
+<body>
+    <!-- Add color to the main menu, change dimensions of it to whatever, etc-->
+    <div class="main-menu">
+        <div class = "menu-header"><center>
+            <!-- Header ICON? BIg letter here(first letter of username)-->
+<div class="profile-icon">
+  g		</div>
 
+<div class="username">guest</div>
+        </div></center>
+
+        <!-- Navbar - later should dynamically load options, but for now are hard coded-->
+        <nav class="navbar navbar-expand">
+            <ul class="navbar-nav navbar-center">
+    <li class="nav-item right-side-padding"><a href ="participant.php">Participant</a></li>                    <li class="nav-item right-side-padding"><a href="logout.php">Log Off </a></li>
+            </ul>
+        </nav>
+    </div>
+
+<!--Put main content in pages here-->
+<div class="main-content">
+<div class="row">
+           <div class = "col-md-6" align="center"><br>
+
+<h1> Users </h1>
+
+<div class="container">
+<table id="myTable">
+<tr>
+<th> Username &nbsp; </th>
+<th> Type of user &nbsp; </th>
+</tr>
+
+<tr><td>Akshat-Patel</td><td>&nbsp; Participant&nbsp; Organizer</td><form action="remove.php" method="post">
+    <td> <input type="hidden" value = "Akshat-Patel" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>guest</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
+    <td> <input type="hidden" value = "guest" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Kees-Leune</td><td>&nbsp; Organizer&nbsp; Administrator</td><form action="remove.php" method="post">
+    <td> <input type="hidden" value = "Kees-Leune" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Michael-Pascale</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
+    <td> <input type="hidden" value = "Michael-Pascale" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Selwyn-Grace</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
+    <td> <input type="hidden" value = "Selwyn-Grace" name="username"> <input type="submit" value="Delete"> </td> </form>	</tr>
+</table>
+</div>
+</div>
+<div class="col-md-6" align="center">
+<form action="insert.php" method="post" id="form" class="container">
+<div align="left"><br>
+<h2> Add a User </h2>
+<input  name="username" type="text" placeholder="Username">
+<input name="password" type="password" placeholder="Password"> <br><br>
+<h3> Roles: </h3> <br>
+ <input type='hidden' value='0' name='isparticipant'>
+<input type="checkbox"  name="isparticipant" value="1">&nbsp; Is a Participant <br><br>
+ <input type='hidden' value='0' name='isadmin'>
+<input type="checkbox"  name="isadmin" value="1">&nbsp; Is a Admin <br><br>
+ <input type='hidden' value='0' name='isorganizer'>
+<input type="checkbox"  name="isorganizer" value="1">&nbsp; Is a Organizer <br><br>
+<p> *You can check multiple roles </p>
+ <input id="submit" type="submit" value="ADD">
+</div>
+</form>
+</div>
+</div>
+</body>
 {% endblock %}
+

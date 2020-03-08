@@ -1,4 +1,4 @@
-<!-- templates/index.html -->
+<!-- templates/calendar.html -->
 
 {% extends "base.html" %}
 
@@ -13,7 +13,7 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'dayGrid', 'timeGrid', 'list', 'bootstrap' ],
+      plugins: [ 'dayGrid', 'timeGrid', 'list', 'bootstrap' ,'interaction'],
       defaultView: 'dayGridMonth',
       timezone: 'UTC',
       themeSystem: 'bootstrap',
@@ -22,29 +22,63 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
+      navLinks: true,
+      selectable: true,
+      selectMirror: true,
 
+
+      select: function(arg) {
+        var title = window.prompt('Event title: ');
+        //var jsonTitle = '';
+        //try to get alertable to work
+      /* $.alertable.prompt('Event title:').then(function(title){
+          console.log('Title', title);
+          title = this.title;
+          return title;
+        });
+       jsonTitle =  JSON.stringify(title.value);
+        console.log("Title:", jsonTitle);*/
+        if(title){
+            calendar.addEvent({
+            title: title,
+            start: arg.start,
+            end: arg.end,
+            allDay: arg.allDay
+          })
+        }
+        calendar.unselect()
+      },
+      editable: true,
       eventClick: function(info) {
       var eventObj = info.event;
+      $(".modal").addClass("is-active");
 
-      if (eventObj.url) {
+
+      $(".delete").click(function() {
+        $(".modal").removeClass("is-active");
+        });
+      document.getElementById("title").innerHTML = 'Event: ' + eventObj.title + '.\n ';
+      document.getElementById("body").innerHTML = 'Description: ' + info.event.extendedProps.description + '.\n \n';
+
+     /*if (eventObj.url) {
         $.alertable.alert(
           'Event: ' + eventObj.title + '.\n ' +
           'Description: ' + info.event.extendedProps.description + '.\n \n'
           //'Will open ' + eventObj.url + ' in a new tab'
-        );
+        );}*/
 	       if (info.event.url) {
-          // window.open(info.event.url);
+        //  window.open(info.event.url);
     			     }
         info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
-      } else {
-        alert('Clicked ' + eventObj.title);
-      }
+      //} else {
+      //  alert('Clicked ' + eventObj.title);
+    //  }
     },
       weekNumbers: true,
       eventLimit: true, // allow "more" link when too many events
       //events: 'https://fullcalendar.io/demo-events.json'
       //events: '../static/icalexport.json'
-	     events: 'static/{{ email }}icalexport.ics.json'
+	    events: 'static/{{ email }}icalexport.ics.json'
       /*events: [
     {
       title  : 'Senior seminar II',
@@ -73,10 +107,24 @@
       }*/
     });
 
-
     calendar.render();
   });
+
 </script>
 
 <div id="calendar"></div>
+<div id='datepicker'></div>
+
+<div class="modal modal-fx-fadeInScale">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head has-background-info" style="padding: 8px;">
+      <p class="modal-card-title has-text-white" id="title" style="margin-bottom: 0px;"></p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body has-background-light" id="body">
+      <!-- Content ... -->
+    </section>
+  </div>
+</div>
 {% endblock %}

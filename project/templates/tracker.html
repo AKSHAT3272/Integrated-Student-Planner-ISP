@@ -3,11 +3,141 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+  .circle-wrap {
+    overflow: hidden;
+    margin: 10% auto;
+  }
+
+  .circular-bar {
+    text-align: center;
+
+    width: 30%;
+    float: left;
+  }
+  .circular-bar .circular-bar-content {
+    margin-bottom: 70px;
+    margin-top: -95px;
+    text-align: center;
+  }
+  .circular-bar .circular-bar-content strong {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    line-height: 24px;
+  }
+  .circular-bar .circular-bar-content label {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    line-height: 20px;
+  }
+
+  .default {
+    margin-left: 100px;
+      width: 400px;
+      height: 22px;
+      background: #eee;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .default div {
+      height: 100%;
+      color: #fff;
+      text-align: right;
+      font-size: 12px;
+      line-height: 22px;
+      width: 0;
+  }
+
+  .default_1 div {
+    background: #607d8b;
+  }
+
+  .default_2 div {
+    background: #009688;
+  }
+</style>
 <h1 class="title">
-  Integerated Student Planner
+  Senior Seminar II
 </h1>
 <h2 class="subtitle">
-  Lets track stuff!
-</h2>
+Tracking course...
+  </h2>
+<div class="circle-wrap">
+  <div class="circular-bar">
+    <input type="text" class="dial" data-fgColor="#00bcd4" data-width="150" data-height="150" data-linecap=round  value="50" >
+    <div class="circular-bar-content">
+      <strong>Sprints</strong>
+      <label></label>
+    </div>
+  </div>
 
+  <div class="circular-bar">
+    <input type="text" class="dial" data-fgColor="#009688" data-width="150" data-height="150" data-linecap=round  value="30" >
+    <div class="circular-bar-content">
+      <strong>Assignments</strong>
+      <label></label>
+    </div>
+   </div>
+
+  <div class="circular-bar">
+    <input type="text" class="dial" data-fgColor="#607d8b" data-width="150" data-height="150" data-linecap=round  value="85" >
+    <div class="circular-bar-content">
+      <strong>Exams</strong>
+      <label></label>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+  $('.dial').each(function () {
+
+            var elm = $(this);
+            var color = elm.attr("data-fgColor");
+            var perc = elm.attr("value");
+
+            elm.knob({
+                 'value': 0,
+                  'min':0,
+                  'max':100,
+                  "skin":"tron",
+                  "readOnly":true,
+                  "thickness":.1,                 'dynamicDraw': true,                "displayInput":false
+            });
+
+            $({value: 0}).animate({ value: perc }, {
+                duration: 2000,
+                easing: 'swing',
+                progress: function () {                  elm.val(Math.ceil(this.value)).trigger('change')
+                }
+            });
+
+            //circular progress bar color
+            $(this).append(function() {
+                elm.parent().parent().find('.circular-bar-content').css('color',color);
+                elm.parent().parent().find('.circular-bar-content label').text(perc+'%');
+            });
+
+            });
+
+  function progressBar(percent, $element) {
+	var progressBarWidth = percent * $element.width() / 100;
+	$element.find('div').animate({ width: progressBarWidth }, 1500).html(percent + "%&nbsp;");
+  }
+
+  progressBar(75, $('#progressBar'));
+
+  progressBar(25, $('#progressBar2'));
+
+ });
+</script>
 {% endblock %}

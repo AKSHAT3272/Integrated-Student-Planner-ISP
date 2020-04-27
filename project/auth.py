@@ -80,6 +80,24 @@ def signup_post():
 
     return redirect(url_for('auth.login'))
 
+@auth.route('/contact')
+def contact():
+    return render_template('contactus.html')
+
+@auth.route('/contact', methods=['POST'])
+def contact_post():
+    email = request.form.get('email')
+    name = request.form.get('name')
+    html = request.form.get('message')
+
+    subject = 'Contact us inquiry Name:' + name + " Email:" + email
+    send_email('akshatpatel@mail.adelphi.edu',subject,html)
+    flash('Inquriry sent, someone will reachout soon. Thank you!')
+    return redirect(url_for('main.aboutus'))
+
+
+
+
 @auth.route('/reset')
 def reset():
     return render_template('reset.html')

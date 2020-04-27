@@ -4,66 +4,102 @@
 
 {% block content %}
 <body>
-    <!-- Add color to the main menu, change dimensions of it to whatever, etc-->
-    <div class="main-menu">
-        <div class = "menu-header"><center>
-            <!-- Header ICON? BIg letter here(first letter of username)-->
-<div class="profile-icon">
-  g		</div>
-
-<div class="username">guest</div>
-        </div></center>
-
-        <!-- Navbar - later should dynamically load options, but for now are hard coded-->
-        <nav class="navbar navbar-expand">
-            <ul class="navbar-nav navbar-center">
-    <li class="nav-item right-side-padding"><a href ="participant.php">Participant</a></li>                    <li class="nav-item right-side-padding"><a href="logout.php">Log Off </a></li>
-            </ul>
-        </nav>
-    </div>
-
-<!--Put main content in pages here-->
-<div class="main-content">
-<div class="row">
-           <div class = "col-md-6" align="center"><br>
-
-<h1> Users </h1>
-
+<link rel="stylesheet" href="{{ url_for('static', filename='adminStyle.css')}}">
 <div class="container">
-<table id="myTable">
-<tr>
-<th> Username &nbsp; </th>
-<th> Type of user &nbsp; </th>
-</tr>
 
-<tr><td>Akshat-Patel</td><td>&nbsp; Participant&nbsp; Organizer</td><form action="remove.php" method="post">
-    <td> <input type="hidden" value = "Akshat-Patel" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>guest</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
-    <td> <input type="hidden" value = "guest" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Kees-Leune</td><td>&nbsp; Organizer&nbsp; Administrator</td><form action="remove.php" method="post">
-    <td> <input type="hidden" value = "Kees-Leune" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Michael-Pascale</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
-    <td> <input type="hidden" value = "Michael-Pascale" name="username"> <input type="submit" value="Delete"> </td> </form><tr><td>Selwyn-Grace</td><td>&nbsp; Participant</td><form action="remove.php" method="post">
-    <td> <input type="hidden" value = "Selwyn-Grace" name="username"> <input type="submit" value="Delete"> </td> </form>	</tr>
-</table>
-</div>
-</div>
-<div class="col-md-6" align="center">
-<form action="insert.php" method="post" id="form" class="container">
-<div align="left"><br>
-<h2> Add a User </h2>
-<input  name="username" type="text" placeholder="Username">
-<input name="password" type="password" placeholder="Password"> <br><br>
-<h3> Roles: </h3> <br>
- <input type='hidden' value='0' name='isparticipant'>
-<input type="checkbox"  name="isparticipant" value="1">&nbsp; Is a Participant <br><br>
- <input type='hidden' value='0' name='isadmin'>
-<input type="checkbox"  name="isadmin" value="1">&nbsp; Is a Admin <br><br>
- <input type='hidden' value='0' name='isorganizer'>
-<input type="checkbox"  name="isorganizer" value="1">&nbsp; Is a Organizer <br><br>
-<p> *You can check multiple roles </p>
- <input id="submit" type="submit" value="ADD">
-</div>
-</form>
-</div>
-</div>
+                <section class="hero is-info welcome is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Hello, {{name}} <i class="fas fa-users-cog"></i>.
+                            </h1>
+                            <h2 class="subtitle">
+                                I hope you are having a great day!
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="info-tiles">
+                    <div class="tile is-ancestor has-text-centered">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">{{ output_data|length }}</p>
+                                <p class="subtitle">Users</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Server Status</p>
+                                <p class="subtitle"><span class="dot"></span> ONLINE</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="card events-card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Users
+                                </p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+                            </header>
+                            <div class="card-table">
+                                <div class="content">
+                                    <table class="table is-fullwidth is-striped">
+                                      {% for row in output_data %}
+                                        <tbody>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>{{row[0]}}</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Edit</a> &nbsp; <a class="button is-small is-danger" href="#">Delete</a></td>
+                                            </tr>
+                                             {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="#" class="card-footer-item">View All</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    User Search
+                                </p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="control has-icons-left has-icons-right">
+                                        <input class="input is-large" type="text" placeholder="">
+                                        <span class="icon is-medium is-left">
+                      <i class="fa fa-search"></i>
+                    </span>
+                                        <span class="icon is-medium is-right">
+                      <i class="fa fa-check"></i>
+                    </span>
+                  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
-{% endblock %}
 
+
+{% endblock %}

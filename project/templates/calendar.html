@@ -6,7 +6,15 @@
 
 
 
-
+<link rel="stylesheet" href="{{ url_for('static', filename='vanilla-calendar-min.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='adminStyle.css')}}">
+<script src="{{ url_for('static', filename='vanilla-calendar-min.js')}}"></script>
+<style>
+  .Show
+{
+  display:none;
+}
+</style>
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
 
@@ -111,9 +119,11 @@
   });
 
 </script>
-
-<div id="calendar"></div>
+<span style="transform: translateX(-50%)" class="tag is-danger Hide"> Close <button id="hide" class="delete is-small"></button> </span>
+<button class="button is-link Show">Show</button>
+<div style="float:right; width: 70%; margin-left:0px;" id="calendar"></div>
 <div id='datepicker'></div>
+<div style=" margin-bottom: 10px; transform: translateX(-50%); float:left; marign-right:0px; width: 30%;" id="myCalendar" class="vanilla-calendar"></div>
 
 <div class="modal modal-fx-fadeInScale">
   <div class="modal-background"></div>
@@ -127,4 +137,88 @@
     </section>
   </div>
 </div>
+
+<div style="float:left; width:30%; transform: translateX(-50%); " id="events" class="column is-6">
+                        <div class="card events-card">
+                            <header style="padding:0px;" class="card-header">
+                                <p class="card-header-title">
+                                    <strong> Latest Events </strong>
+                                </p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+                            </header>
+                            <div class="card-table">
+                                <div class="content">
+                                    <table class="table is-fullwidth is-striped">
+
+                                        <tbody>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Sprint Report 4 is due.</td>
+                                                  <td> 04/06/2020</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Edit</a>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Sprint Report 5 is due.</td>
+                                                  <td> 04/20/2020</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Edit</a>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Sprint Report 6 is due.</td>
+                                                  <td> 05/04/2020</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Edit</a>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Final Project Deliverables is due.</td>
+                                                  <td> 05/11/2020</td>
+                                                <td class="level-right"><a class="button is-small is-primary" href="#">Edit</a>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="#" class="card-footer-item">View All</a>
+                            </footer>
+                        </div>
+                    </div>
+
+<script>
+        let pastDates = true, availableDates = false, availableWeekDays = false
+
+        let calendar = new VanillaCalendar({
+            selector: "#myCalendar",
+            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            shortWeekday: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+            onSelect: (data, elem) => {
+                console.log(data, elem)
+            }
+        })
+$( document ).ready(function() {
+        $('.Show').click(function() {
+            $('#myCalendar').show(500);
+            $('#events').show(500);
+            $('#calendar').css({"width":"70%"});
+            $('.Show').hide(0);
+            $('.Hide').show(0);
+        });
+        $('.Hide').click(function() {
+            $('#myCalendar').hide(500);
+            $('#events').hide(500);
+            $('#calendar').css({"width":"100%"});
+            $('.Show').show(0);
+            $('.Hide').hide(0);
+        });
+        $('.toggle').click(function() {
+            $('#myCalendar').toggle('slow');
+        });
+      });
+    </script>
 {% endblock %}

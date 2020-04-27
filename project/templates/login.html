@@ -5,6 +5,8 @@
 {% block content %}
 <div class="column is-4 is-offset-4">
     <h3 class="title">Login</h3>
+    <hr class="login-hr">
+    <p class="subtitle has-text-black">Please login to proceed.</p>
     <div class="box">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -41,14 +43,16 @@
                 </label>
             </div>
 
-            <button class="button is-block is-success is-medium is-fullwidth">Login</button>
-
+            <button class="button is-block is-success is-medium is-fullwidth">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+          </form>
+      </div>
             <div class="is=link">
               <label>
-                <a href="{{url_for('auth.reset')}}"> I need to reset my password </a>
+                <a href="{{url_for('auth.signup')}}"> Sign Up</a> &nbsp;·&nbsp;
+                <a href="{{url_for('auth.reset')}}"> Forgot Password</a> &nbsp;·&nbsp;
+                <a href="../">Need Help?</a>
               </label>
               </div>
-        </form>
-    </div>
+
 </div>
 {% endblock %}

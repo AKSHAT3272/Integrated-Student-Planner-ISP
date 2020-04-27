@@ -80,6 +80,9 @@
                             <a href="{{ url_for('main.aboutus') }}" class="navbar-item">
                                 About Us
                             </a>
+                            <a href="{{ url_for('auth.contact') }}" class="navbar-item">
+                                Contact Us
+                            </a>
                             {% endif %}
                             {% if current_user.is_authenticated %}
                             <a href="{{ url_for('main.home') }}" class="navbar-item">
@@ -121,6 +124,24 @@
                           </p>
                             {% endif %}
                             {% if current_user.is_authenticated %}
+
+                            </div>
+                            <div class="navbar-item">
+                            <div class="field">
+                              <div class="file is-info">
+                                <label class="file-label">
+                                  <form action = "http://34.74.137.73:5000/uploader" method = "POST" enctype = "multipart/form-data">
+                                  <input class="file-input" type="file" name="file" onchange="form.submit()">
+                                  <span class="file-cta">
+
+                                      <i class="fas fa-upload"></i>
+
+                                    </span>
+                                  </label>
+                                </form>
+                                  </div>
+                                </div>
+                              </div>
                              <div class="navbar-item has-dropdown is-hoverable">
                                <a class="navbar-link pagination is-rounded is-medium " style="padding-right:1.2em">
                                 <h1 class="pagination-link">
@@ -183,7 +204,7 @@
         </div>
       <footer class="footer" style="padding-bottom: 1em; padding-top: 1em;">
         <div class="container">
-            <div class="level-item"><a class="title has-text-centered is-4" href="#">Integerated Student Planner</a></div>
+            <div class="level-item"><a class="title has-text-centered is-4" href="#">integrated Student Planner</a></div>
           <hr>
             <div class="subtitle has-text-centered is-6">
               <p>&copy;2020 ISP. All right reserved.</p>

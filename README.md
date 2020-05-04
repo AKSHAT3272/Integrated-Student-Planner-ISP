@@ -3,16 +3,20 @@
 
 > ISP is a web-based application that keeps track of homework assignments, exams, and projects and notifies you via email and chrome notifications before they are due. The key feature of ISP is the ability to automate calendars and information from external sources easily into our application.
 
-### 🏠 [Homepage](https://127.0.0.1) 
- (Change this later)
+### 🏠 [Homepage](http://34.74.137.73:5000/) 
+ ![Alt text](screenshots/home.png "Home Page")
 
-### ✨ [Demo](https://127.0.0.1)
- (Change this later)
+### ✨ [Demo](http://34.74.137.73:5000/)
+ ![Alt text](screenshots/home1.png "Home Page")
 
 ## Usage
 
 ```sh
-Add instructions on usage 
+1. Run pip install -r requirements.txt (Python 2), 
+or pip3 install -r requirements.txt (Python 3)
+2. Read _dbconfigReadme.txt_ to configure database.
+3. Run _flaskSettings_ shell script to run the app. 
+
 ```
 
 ## Author

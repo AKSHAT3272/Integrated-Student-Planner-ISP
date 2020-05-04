@@ -8,7 +8,7 @@ from project import app
 import os
 
 UPLOAD_FOLDER = '/home/akshat/isp/project/static/uploads'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','ical'}
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','ical','ics'}
 
 main = Blueprint('main', __name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

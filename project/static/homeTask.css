@@ -1,0 +1,301 @@
+body {
+}
+
+#container {
+
+  background-color: #fafafa;
+  padding: 0px;
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+  margin: 6rem 0;
+  border-radius: 0.75rem;
+}
+
+#footer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  align-self: flex-start;
+  text-transform: uppercase;
+  box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
+}
+#footer #taskAdd {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 4rem;
+  background: #1396EC;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  border-radius: 0.75rem;
+  border: 0;
+  outline: 0;
+  will-change: transform;
+}
+#footer #taskAdd:hover {
+  background: #00D1B2;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#footer #taskAdd:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+#footer input#taskInput {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  width: calc(100% - 3rem - 5px);
+  border: none;
+}
+#footer input#taskInput:focus {
+  outline: 0;
+  border-color: white;
+  color: #0d0d0d;
+}
+
+#tasks {
+  padding: 1.5rem 2rem;
+  opacity: 0.9;
+}
+#tasks #tasksList {
+  list-style-type: none;
+  padding-left: 0;
+}
+#tasks #tasksList li {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+  border-radius: 0.75rem;
+  color: #0d0d0d;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .03rem;
+  -webkit-animation: fadeIn .5s linear;
+          animation: fadeIn .5s linear;
+  background-color: #fff;
+  margin-bottom: 5px;
+  position: relative;
+  border-right: 0px solid lightgray;
+  letter-spacing: -.015rem;
+  will-change: transform;
+}
+#tasks #tasksList li:hover {
+  border-right: 55px solid red;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.2);
+}
+#tasks #tasksList li:hover .delete {
+  right: -37px;
+  color: white;
+}
+#tasks #tasksList li .delete {
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  position: absolute;
+  color: transparent;
+  background: none;
+  border: none;
+  outline: 0;
+  line-height: .85rem;
+  font-size: 1rem;
+}
+#tasks #tasksList li .delete:hover {
+  opacity: .75;
+}
+#tasks #notification {
+  padding-top: 1rem;
+  text-align: center;
+  color: gray;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+}
+
+/* Date and Time */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  color: #323a44;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .block {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.wrapper .block .cal {
+  width: 300px;
+  height: 300px;
+  border: 12px solid #E5E6E7;
+  border-radius: 70px;
+  text-align: center;
+}
+.wrapper .block .cal .cal__item {
+  width: 100%;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wrapper .block .cal .cal__item.month {
+  top: 20px;
+  color: #E5E6E7;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.wrapper .block .cal .cal__item.day {
+  font-size: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .block .cal .cal__item.year {
+  bottom: 30px;
+  color: #7C8BA4;
+  font-size: 20px;
+}
+.wrapper .block .timer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -33.3333333333px;
+  right: -33.3333333333px;
+  border: 8px solid #323a44;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px white;
+  transform: rotate(-90deg);
+}
+.wrapper .block .timer .timer__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #323a44;
+  border-radius: 70px;
+}
+.wrapper .block .timer .timer__item.sec {
+  width: 40%;
+  height: 2.6666666667px;
+  margin-top: -1.3333333333px;
+  margin-left: -1.3333333333px;
+  transform-origin: 1.3333333333px 1.3333333333px;
+  background: #E74C3C;
+}
+.wrapper .block .timer .timer__item.min {
+  width: 40%;
+  height: 8px;
+  margin-top: -4px;
+  margin-left: -4px;
+  transform-origin: 4px 4px;
+}
+.wrapper .block .timer .timer__item.hour {
+  width: 25%;
+  height: 8px;
+  margin-top: -4px;
+  margin-left: -4px;
+  transform-origin: 4px 4px;
+}
+.wrapper .message {
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2em;
+}
+.wrapper .message .label {
+  background: #0099ff;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 8px 6px;
+  border-radius: 70px;
+}
+.wrapper .message .label.type {
+  background: #65AB09;
+}
+.wrapper .message .label.month {
+  text-transform: uppercase;
+}

@@ -8,7 +8,12 @@
 
 <link rel="stylesheet" href="{{ url_for('static', filename='vanilla-calendar-min.css')}}">
 <link rel="stylesheet" href="{{ url_for('static', filename='adminStyle.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='icons.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='today.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='quickv.css')}}">
 <script src="{{ url_for('static', filename='vanilla-calendar-min.js')}}"></script>
+<script src="{{ url_for('static', filename='quickv.js')}}"></script>
+
 <style>
   .Show
 {
@@ -16,8 +21,10 @@
 }
 </style>
 <script type="text/javascript">
+
   document.addEventListener('DOMContentLoaded', function() {
 
+    var quickviews = bulmaQuickview.attach();
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -118,12 +125,134 @@
     calendar.render();
   });
 
+  function doalert(checkboxElem) {
+  if (checkboxElem.checked) {
+      document.getElementById("time").disabled = true;
+      document.getElementById("time2").disabled = true;
+    } else {
+      document.getElementById("time").disabled = false;
+      document.getElementById("time2").disabled = false;
+            }
+    }
 </script>
-<span style="transform: translateX(-50%)" class="tag is-danger Hide"> Close <button id="hide" class="delete is-small"></button> </span>
+<div id="quickviewDefault" class="quickview">
+  <header class="quickview-header">
+    <strong><h2 class="title">New Event</h2></strong>
+    <span class="delete" data-dismiss="quickview"></span>
+  </header>
+
+  <div class="quickview-body">
+    <div class="quickview-block">
+      <div class="container">
+      <div class="field">
+  <label class="label">Event Title</label>
+  <div class="control">
+    <input class="input is-info" type="text" placeholder="Title">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Start Date</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-success" type="date" placeholder="Date" value="bulma">
+    <span class="icon is-small is-left">
+      <i class="fas fa-table"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">End Date</label>
+  <div class="control has-icons-left has-icons-right">
+    <span class="icon is-small is-left">
+      <i class="fas fa-table"></i>
+    </span>
+    <input class="input is-danger" type="date" placeholder="End date">
+    <span class="icon is-small is-right">
+      <i class="fas fa-window-close"></i>
+    </span>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Event Time </label>
+  <div style="width:48%; float:left;" class="control has-icons-left ">
+    <span class="icon is-small is-left">
+      <i class="fas fa-clock"></i>
+    </span>
+    <input id="time" class="input is-success" type="time" placeholder="start time">
+  </div>
+  <div style="width:48%; float:right;"class="field">
+    <div class="control has-icons-left">
+      <span class="icon is-small is-left">
+        <i class="fas fa-clock"></i>
+      </span>
+      <input id="time2" class="input is-danger" type="time" placeholder="end time">
+    </div>
+</div>
+
+</div>
+<br><br>
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input id="myCheck" type="checkbox" onchange="doalert(this)">
+      All Day Event
+       </label>
+     </div>
+   </div>
+
+<div class="field">
+  <label class="label">Description</label>
+  <div class="control">
+    <textarea class="textarea is-info" placeholder="Enter event description"></textarea>
+  </div>
+</div>
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button data-dismiss="quickview" class="button is-info">Submit</button>
+  </div>
+  <div class="control">
+    <button data-dismiss="quickview" class="button is-danger is-light">Cancel</button>
+  </div>
+</div>
+
+<hr class="login-hr">
+<div class="field">
+  <label class="label">Import Calendar</label>
+  <div class="file">
+    <label class="file-label">
+      <form action = "http://34.74.137.73:5000/uploader" method = "POST" enctype = "multipart/form-data">
+      <input class="file-input" type="file" name="file" onchange="form.submit()">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Choose a file…
+        </span>
+      </span>
+      </form>
+    </label>
+  </div>
+</div>
+    </div>
+    </div>
+  </div>
+
+  <footer class="quickview-footer">
+
+  </footer>
+</div>
+
 <button class="button is-link Show">Show</button>
 <div style="float:right; width: 70%; margin-left:0px;" id="calendar"></div>
 <div id='datepicker'></div>
-<div style=" margin-bottom: 10px; transform: translateX(-50%); float:left; marign-right:0px; width: 30%;" id="myCalendar" class="vanilla-calendar"></div>
+<!--<div style=" margin-bottom: 10px; transform: translateX(-50%); float:left; marign-right:0px; width: 30%;" id="myCalendar" class="vanilla-calendar"></div> -->
 
 <div class="modal modal-fx-fadeInScale">
   <div class="modal-background"></div>
@@ -138,7 +267,7 @@
   </div>
 </div>
 
-<div style="float:left; width:30%; transform: translateX(-50%); " id="events" class="column is-6">
+<div style="float:left; width:30%; transform: translateX(-50%); " id="events" class="">
                       <!--  <div class="card events-card">
                             <header style="padding:0px;" class="card-header">
                                 <p class="card-header-title">
@@ -193,18 +322,22 @@
 
    <!--======= Header =======-->
 
-   <header class="header">
-   </header>
-
    <!--======= Today =======-->
 
    <section class="today-box" id="today-box">
-      <span class="breadcrumb">Today</span>
-      <h3 class="date-title">May 15, 2018</h3>
-
-      <div class="plus-icon">
-         <i class="ion ion-ios-add"></i>
-      </div>
+     <span style="line-height: 20px;
+     width: auto;
+     font-size: 8pt;
+     font-family: tahoma;
+     padding-left: 0;
+     padding-right: 10px;
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     right:0;" class="tag is-danger Hide"> <button style="padding-right: 2px;" id="hide" class="delete is-small"></button> </span>
+      <span>Today</span>
+      <h3 class="date-title">May 4, 2020</h3>
    </section>
 
    <!--======= Upcoming Events =======-->
@@ -213,43 +346,53 @@
       <div class="container">
          <h3>
             Lastest Events
-
          </h3>
          <div class="events-wrapper">
             <div class="event">
-               <i class="ion ion-ios-flame hot"></i>
-               <h4 class="event__point">11:00 am</h4>
-               <span class="event__duration">in 30 minutes.</span>
+               <i class="ion ion-ios-calendar-outline hot"></i>
+               <h4 class="event__point">Senior Seminar II</h4>
+               <span class="event__duration">50 minutes.</span>
                <p class="event__description">
-                  Monday briefing with the team (...).
+                  10:00 am
                </p>
             </div>
             <div class="event">
-               <i class="ion ion-ios-flame done"></i>
-               <h4 class="event__point">12:00 pm</h4>
-               <span class="event__duration">in 1 hour.</span>
+              <i class="ion ion-ios-calendar-outline upcoming"></i>
+               <h4 class="event__point">Operating Systems</h4>
+               <span class="event__duration">50 minutes.</span>
                <p class="event__description">
-                  Lunch with Paul Mccartney @Burgers House!
+                  12:00 pm
                </p>
             </div>
-            <div class="event">
-               <i class="ion ion-ios-flame-outline upcoming"></i>
-               <h4 class="event__point">20:45 pm</h4>
-               <span class="event__duration">in 45 minutes.</span>
-               <p class="event__description">
-                  Watch sci-fi series.
-               </p>
-            </div>
-            <div class="event">
-               <i class="ion ion-ios-flame-outline upcoming"></i>
-               <h4 class="event__point">23:15 pm</h4>
-               <span class="event__duration">in 20 minutes.</span>
-               <p class="event__description">
-                  Customer dialog on Skype.
-               </p>
-            </div>
+            <h4>
+               Future Events
+            </h4>
+               <div class="event">
+                  <i class="ion ion-ios-calendar-outline"></i>
+                  <h4 class="event__point">Senior Seminar II</h4>
+                  <span class="event__duration">50 minutes.</span>
+                  <p class="event__description">
+                     05/06/2020 10:00 am
+                  </p>
+               </div>
+               <div class="event">
+                 <i class="ion ion-ios-calendar-outline"></i>
+                 <h4 class="event__point">Operating Systems</h4>
+                 <span class="event__duration">50 minutes.</span>
+                 <p class="event__description">
+                    05/06/2020 12:00 am
+                 </p>
+               </div>
+               <div class="event">
+                 <i class="ion ion-ios-calendar-outline"></i>
+                 <h4 class="event__point">Digital Forensics</h4>
+                 <span class="event__duration">150 minutes.</span>
+                 <p class="event__description">
+                    05/06/2020 6:00 pm
+                 </p>
+               </div>
          </div>
-         <button class="add-event-button">
+         <button data-show="quickview" data-target="quickviewDefault" class="add-event-button">
             <span class="add-event-button__title">Add Event</span>
 
             <span class="add-event-button__icon">

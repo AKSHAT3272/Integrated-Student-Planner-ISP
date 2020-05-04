@@ -115,6 +115,7 @@ def reset_post():
         recover_url = url_for('auth.reset_with_token', token=token, _external=True)
         html=render_template('recover.html', recover_url=recover_url)
         send_email(user.email, subject, html)
+        flash('Check your email for a password reset link')
         return redirect(url_for('auth.login'))
 
     #return render_template('reset.html')

@@ -1,0 +1,38 @@
+Assignment 6
+1.	For both 3rd and 4th editions: Chapter 10 Exercise 4.
+
+After the following statements execute, what are the contents of the deque? Note front and back in your answer.
+DequeInterface<String> myDeque = new LinkedDeque<>();
+myDeque.addToFront("Jim");
+myDeque.addToFront("Jess");
+myDeque.addToBack("Jill");
+myDeque.addToBack("Jane");
+String name = myDeque.removeFront();
+myDeque.addToBack(name);
+myDeque.addToBack(myDeque.getFront());
+myDeque.addToFront(myDeque.removeBack());
+myDeque.addToFront(myDeque.getBack());
+
+
+Answer: Jess Jim Jim Jill Jane Jess
+  Front: Jess
+  Back: Jess
+
+
+3.	For both 3rd and 4th editions: Chapter 12 Exercise 2.
+
+If myList is an empty list of strings, what does it contain after the following statements execute? Assume the index starts from 1 (the first item is at position 1).
+
+myList.add("alpha");
+myList.add(1, "beta");
+myList.add("gamma");
+myList.add(2, "delta");
+myList.add(4, "alpha");
+myList.remove(2);
+myList.remove(2);
+myList.replace(3, "delta");
+Method: Turn in a text file including your answer. Note the end of the list.
+
+
+Answer: Beta Alpha Delta Gamma
+End: Gamma

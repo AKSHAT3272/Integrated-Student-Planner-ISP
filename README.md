@@ -8,7 +8,7 @@
 
 ### ✨ [Demo](http://34.74.137.73:5000/)
  ![Alt text](screenshots/Home1.png | width=100)
- [Alt text](screenshots/calendar.png)
+ ![Alt text](screenshots/calendar.png)
 
 ## Usage
 

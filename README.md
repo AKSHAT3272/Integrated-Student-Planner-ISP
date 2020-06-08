@@ -4,10 +4,11 @@
 > ISP is a web-based application that keeps track of homework assignments, exams, and projects and notifies you via email and chrome notifications before they are due. The key feature of ISP is the ability to automate calendars and information from external sources easily into our application.
 
 ### 🏠 [Homepage](http://34.74.137.73:5000/) 
- ![Alt text](https://csc-bitbucket.adelphi.edu/projects/S20SS2GB/repos/isp/raw/screenshots/Home.png)
+ ![Alt text](screenshots/Home.png)
 
 ### ✨ [Demo](http://34.74.137.73:5000/)
- ![Alt text](https://csc-bitbucket.adelphi.edu/projects/S20SS2GB/repos/isp/raw/screenshots/Home1.png)
+ ![Alt text](screenshots/Home1.png | width=100)
+ [Alt text](screenshots/calendar.png)
 
 ## Usage
 

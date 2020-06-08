@@ -7,6 +7,7 @@
  ![Alt text](screenshots/Home.png)
 
 ### ✨ [Demo](http://34.74.137.73:5000/)
+ <img src="screenshots/Home1.png" width="50">
  ![Alt text](screenshots/Home1.png)
  ![Alt text](screenshots/calendar.png)
 
